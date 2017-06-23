@@ -1,0 +1,5 @@
+{
+  "id":"59cb5055-a186-4c46-9b7f-eaf3d35cc095",
+  "name":"EMR Cluster",
+  "description":"Deploys an EMR Cluster with Hadoop/Spark"
+}
