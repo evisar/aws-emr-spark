@@ -1,4 +1,5 @@
 #!/bin/bash
+export AWS_REGION_ID=eu-west-1
 component_id=$(cat component.json | jq -r -c ".id")
 
 key_id=$(aws kms list-aliases | jq -r -c ".Aliases[] | select(.AliasName==\"alias/${component_id}\") | .TargetKeyId")
