@@ -1,3 +1,4 @@
+#!/bin/bash
 component_id=$(cat component.json | jq -r -c ".id")
 
 key_id=$(aws kms list-aliases | jq -r -c ".Aliases[] | select(.AliasName==\"alias/${component_id}\") | .TargetKeyId")
