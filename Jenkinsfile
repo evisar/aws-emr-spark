@@ -3,7 +3,8 @@ node {
 	  checkout scm
     	  docker.image('awscli').inside {
        	     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: '${AWS_CRED}']]){
-	          sh "ls"
+	         sh "chmod +x create-cluster.sh" 
+		 sh "./create-cluster.sh"
 	     }
 	  }
     }
