@@ -1,8 +1,8 @@
 node {
-    stage("Build"){
+    stage("Deploy"){
     	docker.image('awscli').inside {
        	   withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: '${AWS_CRED}']]){
-	        sh "ls"
+	        sh "create-cluster.sh"
 	   }
 	}
     }
